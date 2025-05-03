@@ -11,11 +11,9 @@ const Sidebar = () => {
     <aside className="w-64 bg-base-200 border-r border-base-300 hidden lg:flex flex-col h-screen sticky top-0">
       {/* LOGO SECTION */}
       <div className="p-5 border-b border-base-300">
-        <Link to="/" className="flex items-center gap-4">
-          {/* Icon wrapper to ensure size and alignment */}
-          <div className="flex items-center justify-center w-12 h-12">
-            <ShipWheelIcon className="w-10 h-10 text-primary" />
-          </div>
+        <Link to="/" className="flex items-center gap-2.5">
+          {/* ✅ Only size changed here */}
+          <ShipWheelIcon className="w-9 h-9 text-primary" />
           <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
             LetsConnect
           </span>
