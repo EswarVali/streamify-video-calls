@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import useAuthUser from "../hooks/useAuthUser";
-import { BellIcon, HomeIcon, ShipWheelIcon, UsersIcon } from "lucide-react";
+import { BellIcon, HomeIcon, ShipWheelIcon } from "lucide-react";
 
 const Sidebar = () => {
   const { authUser } = useAuthUser();
@@ -9,15 +9,20 @@ const Sidebar = () => {
 
   return (
     <aside className="w-64 bg-base-200 border-r border-base-300 hidden lg:flex flex-col h-screen sticky top-0">
+      {/* LOGO SECTION */}
       <div className="p-5 border-b border-base-300">
-        <Link to="/" className="flex items-center gap-2.5">
-        <ShipWheelIcon width={48} height={48} className="text-primary" />
-          <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary  tracking-wider">
+        <Link to="/" className="flex items-center gap-4">
+          {/* Icon wrapper to ensure size and alignment */}
+          <div className="flex items-center justify-center w-12 h-12">
+            <ShipWheelIcon className="w-10 h-10 text-primary" />
+          </div>
+          <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
             LetsConnect
           </span>
         </Link>
       </div>
 
+      {/* NAVIGATION */}
       <nav className="flex-1 p-4 space-y-1">
         <Link
           to="/"
@@ -60,4 +65,5 @@ const Sidebar = () => {
     </aside>
   );
 };
+
 export default Sidebar;
