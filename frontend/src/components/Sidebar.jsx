@@ -15,7 +15,7 @@ const Sidebar = () => {
           {/* ✅ Only size changed here */}
           <ShipWheelIcon className="w-9 h-9 text-primary" />
           <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-            LetsConnect
+            Connect
           </span>
         </Link>
       </div>
